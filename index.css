@@ -31,6 +31,13 @@ img{
 
 }
 
+.sticky-container{
+    position: sticky;
+    top: 10px;
+    padding: 10px;
+}
+
+
 /* Contenido MAIN */
 
 main{
@@ -62,6 +69,23 @@ main h1{
 .section1 h2{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+/* Contenido SECTION CONTAINER */
+
+.section-container{
+    display: flex;
+    width: 300px;
+
+}
+
+.item{
+    width: 200px;
+    padding: 10px;
+    background-color: #460809;
+    margin: 10px;
+}
+
+
 
 .aegon1-aegon{
     text-align: center;
