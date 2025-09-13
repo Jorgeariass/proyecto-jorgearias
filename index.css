@@ -75,10 +75,11 @@ main h1{
 /* Contenido SECTION 2 */
 
 section h3{
+    color: black;
     text-align: center;
     font-family:serif
-    color: black;
-    list-style: none;
+    
+
 }
 
 .section-2 nav ul{
@@ -100,29 +101,5 @@ section h3{
     gap: 20px;
 }
 
-
-
-
-.aegon1-aegon{
-    text-align: center;
-}
-
-.balerionb-aegon{
-    text-align: left;
-}
-
-.vaghar-visenya{
-    text-align: left;
-}
-
-.name-visenya{
-    text-align: left;
-}
-
-.raenhys3-raenhys{
-    text-align: center;
-}
-
-    
 
 
