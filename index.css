@@ -17,7 +17,6 @@ header{
     padding-right: 100px;
     padding-left: 100px;
     
-    
 }
 
 header nav ul{
@@ -27,6 +26,19 @@ header nav ul{
     font-family: Arial, Helvetica, sans-serif;
     gap: 30px;
     
+}
+
+header p{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 55px;
+    font-family: "Italianno", cursive;
+}
+.Fireandblood{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
 }
 
 .enlace{
@@ -303,6 +315,15 @@ footer{
     justify-content: space-between;
     align-items: center;
 }
+
+.rhaenystargaryen p{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 55px;
+    font-family: "Italianno", cursive;
+
+}
+
 
 .inicioraenhys{
     color: whitesmoke;
