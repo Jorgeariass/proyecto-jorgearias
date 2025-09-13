@@ -231,7 +231,7 @@ footer{
 
 /* VISENYA Y VAGHAR */
 
-.visenyatargaryenn header{
+.visenyatargaryenn{
     background-color: #460809;
     display: flex;
     justify-content: space-between;
@@ -296,3 +296,31 @@ footer{
     text-align: center;
 }
 
+/* Contenido RAENHYS Y MERAXES */
+
+.raenhystargaryen{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inicioraenhys{
+    color: whitesmoke;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.raenhysportada{
+    width: 150px;
+
+}
+
+.rhaenysmain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin: 55px;
+    gap: 15px;
+}
