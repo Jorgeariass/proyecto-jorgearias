@@ -252,7 +252,47 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 15px;
     gap: 15px;
     margin: 55px;
 }
+
+.visenyaintro h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+
+}
+.vagharDragon{
+    width: 250px;
+}
+
+.Vaghargreen{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+    margin: 55px;
+
+}
+
+.Vaghargreen h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    text-decoration: underline;
+    
+}
+
+.volvervisenya{
+    color: #460809;
+    text-decoration: underline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    padding: 30px;
+}
+
+footer{
+    color: whitesmoke;
+    text-align: center;
+}
+
