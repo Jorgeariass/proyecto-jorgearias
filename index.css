@@ -75,11 +75,12 @@ main h1{
     gap: 30px;
 }
 
-.section1 h2{
+.otrosmiembros{
+    color: #460809;
     text-decoration: underline;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
 }
-
 
 /* Contenido SECTION 2 */
 
@@ -103,16 +104,20 @@ main h1{
 }
 
 .section-2 a{
-    color: black;
-    text-decoration: none;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
-/* Contenido SECTION 3 */
+.section-2 a{
+    color: #460809;
+    text-decoration: underline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+/* Contenido SECTION 3 ARCHIMAESTRES */
 
 .section-3 h4{
     text-align: center;
@@ -127,23 +132,31 @@ main h1{
     
 }
 
-
 .section-3 div{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 55px;
-    
-
 }
 
+.archimaest{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #460809;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+
+/* Contenido FOOTER */
+
 footer{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
     background-color: #460809;
     color: whitesmoke;
 }
 
-/* Contenido FOOTER */
+
 
 
 
