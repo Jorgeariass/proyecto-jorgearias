@@ -159,6 +159,73 @@ footer{
 
 
 
+/* AEGON y BALERION */
+
+.aegonconquistador header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inicioaegon{
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+.aegonyhermanas{
+    width: 200px;
+}
+
+.flex1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding: 20px;
+    gap: 30px;
+}
+
+.flex1 h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+}
 
 
 
+.Balerionterrornegro{
+    width: 200px;
+}
+    
+.baleriont{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding: 20px;
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.baleriont h2{
+    text-decoration: underline;
+}
+
+.Volveraegon{
+    color: #460809;
+    text-decoration: underline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+
+/* Footer AEGON */
+
+.aegonf{
+    color: whitesmoke;
+    text-align: center;
+}
