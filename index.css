@@ -169,6 +169,11 @@ footer{
     color: whitesmoke;
 }
 
+footer p{
+    margin: 0px;
+    padding: 1rem;
+}
+
 
 /* AEGON y BALERION */
 
@@ -237,9 +242,12 @@ footer{
 /* Footer AEGON */
 
 .aegonf{
+    margin: 0px;
+    padding: 0px;
     color: whitesmoke;
     text-align: center;
 }
+
 
 /* VISENYA Y VAGHAR */
 
@@ -316,19 +324,10 @@ footer{
     align-items: center;
 }
 
-.rhaenystargaryen p{
-    color: whitesmoke;
-    text-decoration: none;
-    font-size: 55px;
-    font-family: "Italianno", cursive;
-
-}
-
-
 .inicioraenhys{
     color: whitesmoke;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-decoration: none;
+    text-decoration: underline;
     font-size: 20px;
 }
 
@@ -371,3 +370,10 @@ footer{
     font-size: 20px;
     padding: 20px;
 }
+
+
+
+
+
+
+
