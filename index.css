@@ -389,13 +389,12 @@ footer{
 
 
 /* MOBILE */
-@media (min-width: 320px) and (max-width: 926px) {
+@media (min-width: 320px) {
 
     }
 
     header{
         display: flex;
-        justify-content: flex-start;
         gap: 20px;
     }
 
