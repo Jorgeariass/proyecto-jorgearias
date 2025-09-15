@@ -372,8 +372,29 @@ footer{
 }
 
 
+/* MOBILE */
+body {
+    font-size: 16px;
+    padding: 0px;
+    
+}
 
+/* TABLETS */
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+        padding: 0px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+}
 
+/* PC */
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px;
+        padding: 0px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+}
 
-
-
+        
