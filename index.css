@@ -407,9 +407,8 @@ footer{
     header{
         display: flex;
         font-size: 16px;
-        padding-right: 35px; 
-        padding-left: 5px; 
-        gap: 10px;      
+        padding: 20px;
+        gap: 5px;      
     }
 
     .section1{
