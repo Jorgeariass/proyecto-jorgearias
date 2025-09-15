@@ -405,10 +405,11 @@ footer{
     }
 
     header{
-        display: flex;
-        font-size: 16px;
-        padding: 20px;
-        gap: 5px;      
+        padding: 10px;
+        padding-right: 30px;
+        padding-left: 10px;
+        gap: 10px;
+        
     }
 
     .section1{
