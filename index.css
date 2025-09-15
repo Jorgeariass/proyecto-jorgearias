@@ -23,7 +23,7 @@ header{
     background-color: #460809;
     font-size: 15px; 
     padding: 10px;
-   
+
 
 }
 
@@ -387,17 +387,23 @@ footer{
 
 
 /* MOBILE */
-body {
-    font-size: 16px;
-    padding: 0px;
-    
+@media (max-width: 480px) {
+    .container {
+    width: 100%; 
+  }
+
+  .sidebar {
+    display: none; 
+
 }
+}
+    
+
 
 /* TABLETS */
-@media (min-width: 600px) {
+@media (min-width: 768px) and (max-width: 991px) {
     body {
-        font-size: 18px;
-        padding: 0px;
+        font-size: 1.1rem;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
 }
