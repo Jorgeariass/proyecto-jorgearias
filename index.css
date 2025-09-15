@@ -127,6 +127,7 @@ main h1{
     align-items: center;
     flex-wrap: wrap;
     padding: 50px;
+    gap: 20px;
 
     
 }
@@ -389,6 +390,9 @@ footer{
 
 /* MOBILE */
 @media (max-width: 480px) {
+    header{
+        display: block;
+    }
     .section1{
         display: block;
     }
