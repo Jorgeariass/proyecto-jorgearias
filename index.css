@@ -52,7 +52,8 @@ header p{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 70px;
+    padding: 20px;
+    gap: 30px;
 }
 
 .enlace{
@@ -388,23 +389,33 @@ footer{
 
 /* MOBILE */
 @media (max-width: 480px) {
-    .container {
-    width: 100%; 
+    .section1{
+        display: block;
+    }
+    .section-2{
+        display: block;
+        justify-self: center;
+        gap: 30px;
+    }
+   
+    header{
+        display: flex;
+        gap: 20px;
+    }
   }
 
-  .sidebar {
-    display: none; 
 
-}
-}
+
+
     
-
-
 /* TABLETS */
 @media (min-width: 768px) and (max-width: 991px) {
-    body {
-        font-size: 1.1rem;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    .Fireandblood{
+        display: flex;
+        justify-content: space-between;
+    }
+    .button{
+        display: flex;
     }
 }
 
