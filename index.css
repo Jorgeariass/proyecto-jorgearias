@@ -19,6 +19,20 @@ header{
     
 }
 
+.btn{
+    background-color: #460809;
+    font-size: 15px; 
+    padding: 10px;
+   
+
+}
+
+.button a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+
 header nav ul{
     display: flex;
     justify-content: space-between;
