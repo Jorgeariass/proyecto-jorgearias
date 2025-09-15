@@ -10,13 +10,13 @@ body{
 header{
     background-color:#460809 ;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center ;
     padding-top: 10px;
     padding-block: 10px;
     padding-right: 50px;
     padding-left: 50px;
-    
 }
 
 .btn{
@@ -400,16 +400,19 @@ footer{
 
 
 /* MOBILE */
-@media (max-width: 480px) {
-
+@media (min-width: 370px) {
+    header{
+        flex-direction: column;        
     }
 
-    header{
-        padding: 10px;
-        padding-right: 30px;
-        padding-left: 10px;
+    .Fireandblood{
+        flex-direction: column;
+        align-items: center;
         gap: 10px;
-        
+    }
+
+    .Fireandblood p{
+        margin: 0;
     }
 
     .section1{
@@ -423,25 +426,39 @@ footer{
         gap: 30px;
     }
    
-    
-/* TABLETS */
-@media (min-width: 768px) and (max-width: 991px) {
-    .Fireandblood{
-        display: flex;
-        justify-content: space-between;
-    }
+
     .button{
         display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+/* TABLETS */
+@media (min-width: 768px)  {
+    .button{
+        flex-direction: row;
+        gap: 10px;
+
     }
 }
 
 /* PC */
+
 @media (min-width: 1024px) {
+    header{
+        flex-direction: row;
+    }
+
+    .Fireandblood{
+        flex-direction: row;
+    }
     body {
         font-size: 20px;
         padding: 0px;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
 }
+
+
 
         
