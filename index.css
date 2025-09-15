@@ -206,6 +206,11 @@ footer p{
     font-size: 20px;
 }
 
+.raenhysaegon{
+    color: #460809;
+    font-size: 20px;
+}
+
 .aegonyhermanas{
     width: 200px;
 }
@@ -361,6 +366,12 @@ footer{
     gap: 15px;
 }
 
+.enlacehermanos{
+        color: #460809;
+        font-size: 20px;
+}
+
+
 .dragonmeraxes{
     width: 250px;
 }
@@ -389,12 +400,14 @@ footer{
 
 
 /* MOBILE */
-@media (min-width: 320px) {
+@media (max-width: 480px) {
 
     }
 
     header{
         display: flex;
+        padding: 10px;
+        font-size: 16px;
         gap: 20px;
     }
 
@@ -409,15 +422,6 @@ footer{
         gap: 30px;
     }
    
-    header{
-        display: flex;
-        gap: 20px;
-    }
-  
-
-
-
-
     
 /* TABLETS */
 @media (min-width: 768px) and (max-width: 991px) {

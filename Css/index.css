@@ -1,17 +1,37 @@
 
-
 body{
+    margin: 0px;
+    padding: 0px;
     background-color:#FAE9E6;
 }
+
+/* Contenido HEADER */
 
 header{
     background-color:#460809 ;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center ;
+    padding-top: 10px;
+    padding-block: 10px;
     padding-right: 50px;
     padding-left: 50px;
+    
 }
+
+.btn{
+    background-color: #460809;
+    font-size: 15px; 
+    padding: 10px;
+
+
+}
+
+.button a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
 
 header nav ul{
     display: flex;
@@ -22,14 +42,28 @@ header nav ul{
     
 }
 
-nav ul .enlace{
+header p{
     color: whitesmoke;
     text-decoration: none;
+    font-size: 55px;
+    font-family: "Italianno", cursive;
+}
+.Fireandblood{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+.enlace{
+    color: whitesmoke;
+    text-decoration: underline
     
 }
 
 img{
-    width: 200px;
+    width: 125px;
 
 }
 
@@ -53,6 +87,7 @@ main{
 }
 
 main h1{
+    text-decoration: underline;
     font-family: Georgia, 'Times New Roman', Times, serif;
     
 }
@@ -68,13 +103,17 @@ main h1{
     gap: 30px;
 }
 
-.section1 h2{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.otrosmiembros{
+    color: #460809;
+    text-decoration: underline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
 }
 
 /* Contenido SECTION 2 */
 
 .section-2 h3{
+    text-decoration: underline;
     color: black;
     text-align: center;
     font-family:serif
@@ -84,22 +123,313 @@ main h1{
 
 .section-2 nav ul{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    gap: 300px;
     padding: 50px;
+    gap: 20px;
+
+    
 }
 
 .section-2 a{
-    color: black;
-    text-decoration: none;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
+}
+
+.section-2 a{
+    color: #460809;
+    text-decoration: underline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+/* Contenido SECTION 3 ARCHIMAESTRES */
+
+.section-3 h4{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration-line: underline;
+}
+
+.section-3 nav p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    flex-wrap: wrap;  
+     
+    
+}
+
+.section-3 div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 55px;
+}
+
+.archimaest{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #460809;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+
+/* Contenido FOOTER */
+
+footer{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    background-color: #460809;
+    color: whitesmoke;
+}
+
+footer p{
+    margin: 0px;
+    padding: 1rem;
+}
+
+
+/* AEGON y BALERION */
+
+.aegonconquistador header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inicioaegon{
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+.aegonyhermanas{
+    width: 200px;
+}
+
+.flex1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding: 20px;
+    gap: 30px;
+}
+
+.flex1 h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
 }
 
 
 
+.Balerionterrornegro{
+    width: 200px;
+}
+    
+.baleriont{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding: 20px;
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.baleriont h2{
+    text-decoration: underline;
+}
+
+.Volveraegon{
+    color: #460809;
+    text-decoration: underline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+
+/* Footer AEGON */
+
+.aegonf{
+    margin: 0px;
+    padding: 0px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+
+/* VISENYA Y VAGHAR */
+
+.visenyatargaryenn{
+    background-color: #460809;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.iniciov{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.reinavisenya{
+    width: 200px;
+}
+
+.visenyaintro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+    margin: 55px;
+}
+
+.visenyaintro h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+
+}
+.vagharDragon{
+    width: 250px;
+}
+
+.Vaghargreen{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+    margin: 55px;
+
+}
+
+.Vaghargreen h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    text-decoration: underline;
+    
+}
+
+.volvervisenya{
+    color: #460809;
+    text-decoration: underline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    padding: 30px;
+}
+
+footer{
+    color: whitesmoke;
+    text-align: center;
+}
+
+/* Contenido RAENHYS Y MERAXES */
+
+.raenhystargaryen{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inicioraenhys{
+    color: whitesmoke;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.raenhysportada{
+    width: 175px;
+
+}
+
+.rhaenysmain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin: 55px;
+    gap: 15px;
+}
+
+.dragonmeraxes{
+    width: 250px;
+}
+
+.meraxesD{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+    margin: 55px;
+}
+
+.meraxesD h2{
+    text-decoration: underline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.volverraenhys{
+    color: #460809;
+    text-decoration: underline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    padding: 20px;
+}
+
+
+/* MOBILE */
+@media (max-width: 480px) {
+
+    }
+
+    header{
+        display: flex;
+        padding: 10px;
+        font-size: 16px;
+        gap: 20px;
+    }
+
+    .section1{
+        display: block;
+
+    }
+    .section-2{
+        display: block;
+        justify-self: center;
+        text-align: center;
+        gap: 30px;
+    }
+   
+    
+/* TABLETS */
+@media (min-width: 768px) and (max-width: 991px) {
+    .Fireandblood{
+        display: flex;
+        justify-content: space-between;
+    }
+    .button{
+        display: flex;
+    }
+}
+
+/* PC */
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px;
+        padding: 0px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+}
+
+        
