@@ -389,12 +389,19 @@ footer{
 
 
 /* MOBILE */
-@media (min-width: 428px) and (max-width: 926px) {
-    header{
-        display: block;
+@media (min-width: 320px) and (max-width: 926px) {
+
     }
+
+    header{
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
     .section1{
         display: block;
+
     }
     .section-2{
         display: block;
@@ -407,7 +414,7 @@ footer{
         display: flex;
         gap: 20px;
     }
-  }
+  
 
 
 
