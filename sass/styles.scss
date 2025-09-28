@@ -1,0 +1,509 @@
+
+$breakpoint-mobile: 370px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$fuente-targaryen: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+@mixin respond-to($breakpoint) {
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin flex-column {
+    flex-direction: column;
+}
+
+
+// MOBILE
+
+@include respond-to($breakpoint-mobile) {
+    header {
+        @include flex-column; // Usa el mixin
+    }
+
+    .Fireandblood {
+        @include flex-column; // Usa el mixin
+        align-items: center;
+        gap: 10px;
+
+        p { // Anidamiento: estilo para el párrafo dentro de .Fireandblood
+            margin: 0;
+        }
+    }
+
+    .section1 {
+        display: block;
+    }
+
+    .section-2 {
+        display: block;
+        justify-self: center;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .button {
+        display: flex;
+        @include flex-column; // Usa el mixin
+        gap: 5px;
+    }
+}
+
+
+
+// TABLETS
+
+@include respond-to($breakpoint-tablet) {
+    .button {
+        flex-direction: row; // Sobrescribe la columna para tablets
+        gap: 10px;
+    }
+}
+
+
+//PC ESCRITORIO
+
+@include respond-to($breakpoint-desktop) {
+    header {
+        flex-direction: row; // Sobrescribe la columna para PC
+    }
+
+    .Fireandblood {
+        flex-direction: row; // Sobrescribe la columna para PC
+    }
+
+    body {
+        font-size: 20px;
+        padding: 0px;
+        font-family: $fuente-targaryen;
+    }
+}
+
+
+
+$color-principal: #460809; 
+$color-secundario: #FAE9E6; 
+$color-texto-claro: whitesmoke;
+$color-enlace-secundario: #460809; 
+
+// LETRAS
+$font-stack-secundaria: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+$font-stack-titulos: Georgia, 'Times New Roman', Times, serif;
+$font-stack-especial: "Italianno", cursive; // Usado solo en el párrafo del header
+$font-stack-enlaces: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+
+// PAGINA PRINCIPAL
+
+//MIXIN 
+
+@mixin flex-container($direction: row, $justify: center, $align: center, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $color-secundario;
+}
+
+img {
+    width: 125px;
+}
+
+.sticky-container {
+    position: sticky;
+    top: 10px;
+    padding: 10px;
+}
+
+
+
+header {
+    background-color: $color-principal;
+   
+    @include flex-container(row, space-around, center);
+    padding: 10px 50px; 
+
+    p {
+        color: $color-texto-claro;
+        text-decoration: none;
+        font-size: 55px;
+        font-family: $font-stack-especial;
+    }
+
+    nav {
+        ul {
+           
+            @include flex-container(row, space-between, center);
+            list-style: none;
+            font-family: Arial, Helvetica, sans-serif;
+            gap: 30px;
+            padding: 0; 
+            margin: 0; 
+        }
+    }
+}
+
+.btn {
+    background-color: $color-principal;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.button a {
+    color: $color-texto-claro;
+    text-decoration: none;
+}
+
+.Fireandblood {
+    @include flex-container(row, space-between, center);
+    padding: 20px;
+    gap: 30px;
+}
+
+.enlace {
+    color: $color-texto-claro;
+    text-decoration: underline;
+}
+
+
+
+main {
+    
+    @include flex-container(row, space-between, center, wrap);
+    margin: 55px;
+    font-family: $font-stack-secundaria;
+
+    h1 {
+        text-decoration: underline;
+        font-family: $font-stack-titulos;
+    }
+}
+
+
+.section1 {
+   
+    @include flex-container(row, space-between, center);
+    margin: 50px;
+    font-family: $font-stack-secundaria;
+    gap: 30px;
+
+    .otrosmiembros {
+        color: $color-enlace-secundario;
+        text-decoration: underline;
+        font-family: $font-stack-enlaces;
+        font-size: 20px;
+    }
+}
+
+.section-2 {
+    h3 {
+        text-decoration: underline;
+        color: black;
+        text-align: center;
+        font-family: serif;
+    }
+
+    nav ul {
+       
+        @include flex-container(row, space-around, center, wrap);
+        padding: 50px;
+        gap: 20px;
+        list-style: none; 
+
+        a {
+            @include flex-container(row, center, center);
+            gap: 15px;
+            color: $color-enlace-secundario;
+            text-decoration: underline;
+            font-family: $font-stack-enlaces;
+            font-size: 20px;
+        }
+    }
+}
+
+.section-3 {
+    h4 {
+        text-align: center;
+        font-family: $font-stack-titulos;
+        text-decoration: underline;
+    }
+
+    nav p {
+        font-family: $font-stack-secundaria;
+        flex-wrap: wrap;  
+    }
+
+    div {
+        
+        @include flex-container(row, center, center);
+        margin: 55px;
+    }
+
+    .archimaest {
+        font-family: $font-stack-enlaces;
+        color: $color-enlace-secundario;
+        text-decoration: underline;
+        font-size: 20px;
+    }
+}
+
+
+footer {
+    font-family: $font-stack-enlaces;
+    text-align: center;
+    background-color: $color-principal;
+    color: $color-texto-claro;
+
+    p {
+        margin: 0;
+        padding: 1rem;
+    }
+}
+
+// AEGON TARGARYEN Y BALERION
+
+$color-principal: #460809; 
+$color-texto-claro: whitesmoke;
+$color-enlace-secundario: #460809; 
+
+// Letras
+$font-stack-enlaces: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+
+
+@mixin flex-container($direction: row, $justify: center, $align: center, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+
+
+
+.aegonconquistador {
+
+    header {
+        @include flex-container(row, space-between, center);
+    }
+
+    // Estilos del enlace de inicio
+    .inicioaegon {
+        color: $color-texto-claro;
+        text-decoration: none;
+        font-family: $font-stack-enlaces;
+        font-size: 20px;
+    }
+
+    .raenhysaegon {
+        color: $color-enlace-secundario;
+        font-size: 20px;
+    }
+
+    
+    .aegonyhermanas {
+        width: 200px;
+    }
+
+    
+    .flex1 {
+        @include flex-container(row, space-between, center);
+        margin: 0;
+        padding: 20px;
+        gap: 30px;
+
+        h1 {
+            font-family: $font-stack-enlaces;
+            font-size: 40px;
+        }
+    }
+
+    // Bloque de Balerion
+    .Balerionterrornegro {
+        width: 200px;
+    }
+
+
+    .baleriont {
+        @include flex-container(row, space-between, center, wrap);
+        font-family: $font-stack-enlaces;
+        text-decoration: none; 
+        margin: 0;
+        padding: 20px;
+        gap: 20px;
+
+        h2 {
+            text-decoration: underline;
+        }
+    }
+
+    // Volver
+    .Volveraegon {
+        color: $color-enlace-secundario;
+        text-decoration: underline;
+        font-family: $font-stack-enlaces;
+        font-size: 20px;
+    }
+
+    // Footer
+    .aegonf {
+        margin: 0;
+        padding: 0;
+        color: $color-texto-claro;
+        text-align: center;
+    }
+}
+
+
+ // VISENYA 
+
+
+@mixin flex-layout($padding: 0, $gap: 0, $margin: 0) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @if $padding != 0 {
+        padding: $padding;
+    }
+    @if $gap != 0 {
+        gap: $gap;
+    }
+    @if $margin != 0 {
+        margin: $margin;
+    }
+}
+
+
+.visenyatargaryenn {
+    background-color: #460809; 
+    @include flex-layout; 
+
+    .iniciov {
+        color: whitesmoke; 
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    .reinavisenya {
+        width: 200px;
+    }
+}
+
+.visenyaintro {
+    @include flex-layout(15px, 15px, 55px); 
+
+    h1 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 40px;
+    }
+}
+
+.vagharDragon {
+    width: 250px;
+}
+
+.Vaghargreen {
+    @include flex-layout(10px, 15px, 55px); 
+
+    h2 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 30px;
+        text-decoration: underline;
+    }
+}
+
+.volvervisenya {
+    color: #460809;
+    text-decoration: underline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    padding: 30px;
+}
+
+footer {
+    color: whitesmoke;
+    text-align: center;
+}
+
+
+
+// RAENHYS Y MERAXES
+
+
+@mixin flex-layout($padding: 0, $gap: 0, $margin: 0) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @if $padding != 0 {
+        padding: $padding;
+    }
+    @if $gap != 0 {
+        gap: $gap;
+    }
+    @if $margin != 0 {
+        margin: $margin;
+    }
+}
+
+
+$color-fuego: #460809;
+$color-nieve: whitesmoke;
+$fuente-targaryen: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+
+
+.raenhystargaryen {
+    @include flex-layout;
+
+    .inicioraenhys {
+        color: $color-nieve;
+        font-family: $fuente-targaryen;
+        text-decoration: underline;
+        font-size: 20px;
+    }
+
+    .raenhysportada {
+        width: 175px;
+    }
+}
+
+.rhaenysmain {
+  
+    @include flex-layout(15px, 15px, 55px);
+}
+
+.enlacehermanos {
+    color: $color-fuego;
+    font-size: 20px;
+}
+
+.dragonmeraxes {
+    width: 250px;
+}
+
+.meraxesD {
+    
+    @include flex-layout(15px, 15px, 55px);
+
+    h2 {
+        text-decoration: underline;
+        font-family: $fuente-targaryen;
+    }
+}
+
+.volverraenhys {
+    color: $color-fuego;
+    text-decoration: underline;
+    font-family: $fuente-targaryen;
+    font-size: 20px;
+    padding: 20px;
+}
