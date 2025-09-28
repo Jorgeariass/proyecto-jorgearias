@@ -1,104 +1,39 @@
+// =====================================
+// 🎯 1. VARIABLES GLOBALES
+// =====================================
 
+// BREAKPOINTS
 $breakpoint-mobile: 370px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
-$fuente-targaryen: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
+// COLORES
+$color-principal: #460809; // Rojo/Vino (Fuego)
+$color-secundario: #FAE9E6; // Fondo claro
+$color-texto-claro: whitesmoke; // Texto claro (Nieve)
+$color-enlace-secundario: $color-principal; 
+
+// FUENTES
+$fuente-targaryen: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+$font-stack-secundaria: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+$font-stack-titulos: Georgia, 'Times New Roman', Times, serif;
+$font-stack-especial: "Italianno", cursive; // Usado solo en el párrafo del header
+$font-stack-enlaces: $fuente-targaryen;
+
+
+// =====================================
+// 🐉 2. MIXINS GLOBALES
+// =====================================
+
+// Mixin para Media Query
 @mixin respond-to($breakpoint) {
     @media (min-width: $breakpoint) {
         @content;
     }
 }
 
-@mixin flex-column {
-    flex-direction: column;
-}
-
-
-// MOBILE
-
-@include respond-to($breakpoint-mobile) {
-    header {
-        @include flex-column; // Usa el mixin
-    }
-
-    .Fireandblood {
-        @include flex-column; // Usa el mixin
-        align-items: center;
-        gap: 10px;
-
-        p { // Anidamiento: estilo para el párrafo dentro de .Fireandblood
-            margin: 0;
-        }
-    }
-
-    .section1 {
-        display: block;
-    }
-
-    .section-2 {
-        display: block;
-        justify-self: center;
-        text-align: center;
-        gap: 30px;
-    }
-    
-    .button {
-        display: flex;
-        @include flex-column; // Usa el mixin
-        gap: 5px;
-    }
-}
-
-
-
-// TABLETS
-
-@include respond-to($breakpoint-tablet) {
-    .button {
-        flex-direction: row; // Sobrescribe la columna para tablets
-        gap: 10px;
-    }
-}
-
-
-//PC ESCRITORIO
-
-@include respond-to($breakpoint-desktop) {
-    header {
-        flex-direction: row; // Sobrescribe la columna para PC
-    }
-
-    .Fireandblood {
-        flex-direction: row; // Sobrescribe la columna para PC
-    }
-
-    body {
-        font-size: 20px;
-        padding: 0px;
-        font-family: $fuente-targaryen;
-    }
-}
-
-
-
-$color-principal: #460809; 
-$color-secundario: #FAE9E6; 
-$color-texto-claro: whitesmoke;
-$color-enlace-secundario: #460809; 
-
-// LETRAS
-$font-stack-secundaria: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-$font-stack-titulos: Georgia, 'Times New Roman', Times, serif;
-$font-stack-especial: "Italianno", cursive; // Usado solo en el párrafo del header
-$font-stack-enlaces: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
-
-// PAGINA PRINCIPAL
-
-//MIXIN 
-
-@mixin flex-container($direction: row, $justify: center, $align: center, $wrap: nowrap) {
+// Mixin genérico para contenedores flex (sustituye a todos los mixins de flexbox)
+@mixin flex-base($direction: row, $justify: center, $align: center, $wrap: nowrap) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
@@ -106,7 +41,23 @@ $font-stack-enlaces: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     flex-wrap: $wrap;
 }
 
+// Mixin para layout con padding, gap y margin (para secciones de contenido)
+@mixin content-layout($padding: 0, $gap: 0, $margin: 0) {
+    @include flex-base(row, space-between, center);
+    @if $padding != 0 {
+        padding: $padding;
+    }
+    @if $gap != 0 {
+        gap: $gap;
+    }
+    @if $margin != 0 {
+        margin: $margin;
+    }
+}
 
+// =====================================
+// 🖥️ 3. ESTILOS BASE Y PÁGINA PRINCIPAL
+// =====================================
 
 body {
     margin: 0;
@@ -124,12 +75,9 @@ img {
     padding: 10px;
 }
 
-
-
 header {
     background-color: $color-principal;
-   
-    @include flex-container(row, space-around, center);
+    @include flex-base(row, space-around, center);
     padding: 10px 50px; 
 
     p {
@@ -141,8 +89,7 @@ header {
 
     nav {
         ul {
-           
-            @include flex-container(row, space-between, center);
+            @include flex-base(row, space-between, center);
             list-style: none;
             font-family: Arial, Helvetica, sans-serif;
             gap: 30px;
@@ -164,7 +111,7 @@ header {
 }
 
 .Fireandblood {
-    @include flex-container(row, space-between, center);
+    @include flex-base(row, space-between, center);
     padding: 20px;
     gap: 30px;
 }
@@ -174,11 +121,8 @@ header {
     text-decoration: underline;
 }
 
-
-
 main {
-    
-    @include flex-container(row, space-between, center, wrap);
+    @include flex-base(row, space-between, center, wrap);
     margin: 55px;
     font-family: $font-stack-secundaria;
 
@@ -188,10 +132,8 @@ main {
     }
 }
 
-
 .section1 {
-   
-    @include flex-container(row, space-between, center);
+    @include flex-base(row, space-between, center);
     margin: 50px;
     font-family: $font-stack-secundaria;
     gap: 30px;
@@ -213,14 +155,13 @@ main {
     }
 
     nav ul {
-       
-        @include flex-container(row, space-around, center, wrap);
+        @include flex-base(row, space-around, center, wrap);
         padding: 50px;
         gap: 20px;
         list-style: none; 
 
         a {
-            @include flex-container(row, center, center);
+            @include flex-base(row, center, center);
             gap: 15px;
             color: $color-enlace-secundario;
             text-decoration: underline;
@@ -239,12 +180,11 @@ main {
 
     nav p {
         font-family: $font-stack-secundaria;
-        flex-wrap: wrap;  
+        flex-wrap: wrap; 
     }
 
     div {
-        
-        @include flex-container(row, center, center);
+        @include flex-base(row, center, center);
         margin: 55px;
     }
 
@@ -269,34 +209,77 @@ footer {
     }
 }
 
-// AEGON TARGARYEN Y BALERION
+// =====================================
+// 📱 4. MEDIA QUERIES (MOBILE FIRST)
+// =====================================
 
-$color-principal: #460809; 
-$color-texto-claro: whitesmoke;
-$color-enlace-secundario: #460809; 
-
-// Letras
-$font-stack-enlaces: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
-
-
-@mixin flex-container($direction: row, $justify: center, $align: center, $wrap: nowrap) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-    flex-wrap: $wrap;
-}
-
-
-
-.aegonconquistador {
-
+@include respond-to($breakpoint-mobile) {
     header {
-        @include flex-container(row, space-between, center);
+        flex-direction: column; 
     }
 
-    // Estilos del enlace de inicio
+    .Fireandblood {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .section1 {
+        display: block;
+    }
+
+    .section-2 {
+        display: block;
+        justify-self: center;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .button {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+@include respond-to($breakpoint-tablet) {
+    .button {
+        flex-direction: row; 
+        gap: 10px;
+    }
+}
+
+@include respond-to($breakpoint-desktop) {
+    header {
+        flex-direction: row; 
+    }
+
+    .Fireandblood {
+        flex-direction: row; 
+    }
+
+    body {
+        font-size: 20px;
+        padding: 0px;
+        font-family: $fuente-targaryen;
+    }
+}
+
+// =====================================
+// 👑 5. PÁGINAS SECUNDARIAS
+// =====================================
+
+// --- AEGON TARGARYEN Y BALERION ---
+
+.aegonconquistador {
+    header {
+        @include flex-base(row, space-between, center);
+    }
+
     .inicioaegon {
         color: $color-texto-claro;
         text-decoration: none;
@@ -309,14 +292,12 @@ $font-stack-enlaces: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 20px;
     }
 
-    
     .aegonyhermanas {
         width: 200px;
     }
 
-    
     .flex1 {
-        @include flex-container(row, space-between, center);
+        @include flex-base(row, space-between, center);
         margin: 0;
         padding: 20px;
         gap: 30px;
@@ -327,14 +308,12 @@ $font-stack-enlaces: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
     }
 
-    // Bloque de Balerion
     .Balerionterrornegro {
         width: 200px;
     }
 
-
     .baleriont {
-        @include flex-container(row, space-between, center, wrap);
+        @include flex-base(row, space-between, center, wrap);
         font-family: $font-stack-enlaces;
         text-decoration: none; 
         margin: 0;
@@ -346,7 +325,6 @@ $font-stack-enlaces: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
     }
 
-    // Volver
     .Volveraegon {
         color: $color-enlace-secundario;
         text-decoration: underline;
@@ -354,7 +332,6 @@ $font-stack-enlaces: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 20px;
     }
 
-    // Footer
     .aegonf {
         margin: 0;
         padding: 0;
@@ -363,32 +340,14 @@ $font-stack-enlaces: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
 }
 
-
- // VISENYA 
-
-
-@mixin flex-layout($padding: 0, $gap: 0, $margin: 0) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @if $padding != 0 {
-        padding: $padding;
-    }
-    @if $gap != 0 {
-        gap: $gap;
-    }
-    @if $margin != 0 {
-        margin: $margin;
-    }
-}
-
+// --- VISENYA TARGARYEN ---
 
 .visenyatargaryenn {
-    background-color: #460809; 
-    @include flex-layout; 
+    background-color: $color-principal; 
+    @include content-layout; 
 
     .iniciov {
-        color: whitesmoke; 
+        color: $color-texto-claro; 
         text-decoration: none;
         font-size: 20px;
     }
@@ -399,10 +358,10 @@ $font-stack-enlaces: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .visenyaintro {
-    @include flex-layout(15px, 15px, 55px); 
+    @include content-layout(15px, 15px, 55px); 
 
     h1 {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: $fuente-targaryen;
         font-size: 40px;
     }
 }
@@ -412,60 +371,31 @@ $font-stack-enlaces: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .Vaghargreen {
-    @include flex-layout(10px, 15px, 55px); 
+    @include content-layout(10px, 15px, 55px); 
 
     h2 {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: $fuente-targaryen;
         font-size: 30px;
         text-decoration: underline;
     }
 }
 
 .volvervisenya {
-    color: #460809;
+    color: $color-enlace-secundario;
     text-decoration: underline;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: $fuente-targaryen;
     font-size: 20px;
     padding: 30px;
 }
 
-footer {
-    color: whitesmoke;
-    text-align: center;
-}
 
-
-
-// RAENHYS Y MERAXES
-
-
-@mixin flex-layout($padding: 0, $gap: 0, $margin: 0) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @if $padding != 0 {
-        padding: $padding;
-    }
-    @if $gap != 0 {
-        gap: $gap;
-    }
-    @if $margin != 0 {
-        margin: $margin;
-    }
-}
-
-
-$color-fuego: #460809;
-$color-nieve: whitesmoke;
-$fuente-targaryen: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
-
+// --- RAENHYS Y MERAXES ---
 
 .raenhystargaryen {
-    @include flex-layout;
+    @include content-layout;
 
     .inicioraenhys {
-        color: $color-nieve;
+        color: $color-texto-claro;
         font-family: $fuente-targaryen;
         text-decoration: underline;
         font-size: 20px;
@@ -477,12 +407,11 @@ $fuente-targaryen: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .rhaenysmain {
-  
-    @include flex-layout(15px, 15px, 55px);
+    @include content-layout(15px, 15px, 55px);
 }
 
 .enlacehermanos {
-    color: $color-fuego;
+    color: $color-principal;
     font-size: 20px;
 }
 
@@ -491,8 +420,7 @@ $fuente-targaryen: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .meraxesD {
-    
-    @include flex-layout(15px, 15px, 55px);
+    @include content-layout(15px, 15px, 55px);
 
     h2 {
         text-decoration: underline;
@@ -501,7 +429,7 @@ $fuente-targaryen: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .volverraenhys {
-    color: $color-fuego;
+    color: $color-principal;
     text-decoration: underline;
     font-family: $fuente-targaryen;
     font-size: 20px;
