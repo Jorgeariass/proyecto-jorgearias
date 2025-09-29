@@ -3,17 +3,16 @@ $breakpoint-mobile: 370px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
 
-// COLORES
 $color-principal: #460809; 
 $color-secundario: #FAE9E6; 
 $color-texto-claro: whitesmoke; 
 $color-enlace-secundario: $color-principal; 
 
-// FUENTES
+
 $fuente-targaryen: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 $font-stack-secundaria: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 $font-stack-titulos: Georgia, 'Times New Roman', Times, serif;
-$font-stack-especial: "Italianno", cursive; // Usado solo en el párrafo del header
+$font-stack-especial: "Italianno", cursive; 
 $font-stack-enlaces: $fuente-targaryen;
 
 
