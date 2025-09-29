@@ -1,328 +1,299 @@
-
-$breakpoint-mobile: 370px;
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 1024px;
-
-$color-principal: #460809; 
-$color-secundario: #FAE9E6; 
-$color-texto-claro: whitesmoke; 
-$color-enlace-secundario: $color-principal; 
-
-
-$fuente-targaryen: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-$font-stack-secundaria: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-$font-stack-titulos: Georgia, 'Times New Roman', Times, serif;
-$font-stack-especial: "Italianno", cursive; 
-$font-stack-enlaces: $fuente-targaryen;
-
-
-
-@mixin respond-to($breakpoint) {
-    @media (min-width: $breakpoint) {
-        @content;
-    }
-}
-
-
-@mixin flex-base($direction: row, $justify: center, $align: center, $wrap: nowrap) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-    flex-wrap: $wrap;
-}
-
-
-@mixin content-layout($padding: 0, $gap: 0, $margin: 0) {
-    @include flex-base(row, space-between, center);
-    @if $padding != 0 {
-        padding: $padding;
-    }
-    @if $gap != 0 {
-        gap: $gap;
-    }
-    @if $margin != 0 {
-        margin: $margin;
-    }
-}
-
-
-
-
-
 body {
-    margin: 0;
-    padding: 0;
-    background-color: $color-secundario;
+  margin: 0;
+  padding: 0;
+  background-color: #FAE9E6;
 }
 
 img {
-    width: 125px;
+  width: 125px;
 }
 
 .sticky-container {
-    position: sticky;
-    top: 10px;
-    padding: 10px;
+  position: sticky;
+  top: 10px;
+  padding: 10px;
 }
 
 header {
-    background-color: $color-principal;
-    @include flex-base(row, space-around, center);
-    padding: 10px 50px; 
+  background-color: #460809;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 10px 50px;
+}
 
-    p {
-        color: $color-texto-claro;
-        text-decoration: none;
-        font-size: 55px;
-        font-family: $font-stack-especial;
-    }
+header p {
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 55px;
+  font-family: "Italianno", cursive;
+}
 
-    nav {
-        ul {
-            @include flex-base(row, space-between, center);
-            list-style: none;
-            font-family: Arial, Helvetica, sans-serif;
-            gap: 30px;
-            padding: 0; 
-            margin: 0; 
-        }
-    }
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
 }
 
 .btn {
-    background-color: $color-principal;
-    font-size: 15px;
-    padding: 10px;
+  background-color: #460809;
+  font-size: 15px;
+  padding: 10px;
 }
 
 .button a {
-    color: $color-texto-claro;
-    text-decoration: none;
+  color: whitesmoke;
+  text-decoration: none;
 }
 
 .Fireandblood {
-    @include flex-base(row, space-between, center);
-    padding: 20px;
-    gap: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 20px;
+  gap: 30px;
 }
 
 .enlace {
-    color: $color-texto-claro;
-    text-decoration: underline;
+  color: whitesmoke;
+  text-decoration: underline;
 }
 
 main {
-    @include flex-base(row, space-between, center, wrap);
-    margin: 55px;
-    font-family: $font-stack-secundaria;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 55px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
 
-    h1 {
-        text-decoration: underline;
-        font-family: $font-stack-titulos;
-    }
+main h1 {
+  text-decoration: underline;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .section1 {
-    @include flex-base(row, space-between, center);
-    margin: 50px;
-    font-family: $font-stack-secundaria;
-    gap: 30px;
-
-    .otrosmiembros {
-        color: $color-enlace-secundario;
-        text-decoration: underline;
-        font-family: $font-stack-enlaces;
-        font-size: 20px;
-    }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 50px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  gap: 30px;
 }
 
-.section-2 {
-    h3 {
-        text-decoration: underline;
-        color: black;
-        text-align: center;
-        font-family: serif;
-    }
-
-    nav ul {
-        @include flex-base(row, space-around, center, wrap);
-        padding: 50px;
-        gap: 20px;
-        list-style: none; 
-
-        a {
-            @include flex-base(row, center, center);
-            gap: 15px;
-            color: $color-enlace-secundario;
-            text-decoration: underline;
-            font-family: $font-stack-enlaces;
-            font-size: 20px;
-        }
-    }
+.section1 .otrosmiembros {
+  color: #460809;
+  text-decoration: underline;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
 }
 
-.section-3 {
-    h4 {
-        text-align: center;
-        font-family: $font-stack-titulos;
-        text-decoration: underline;
-    }
-
-    nav p {
-        font-family: $font-stack-secundaria;
-        flex-wrap: wrap; 
-    }
-
-    div {
-        @include flex-base(row, center, center);
-        margin: 55px;
-    }
-
-    .archimaest {
-        font-family: $font-stack-enlaces;
-        color: $color-enlace-secundario;
-        text-decoration: underline;
-        font-size: 20px;
-    }
+.section-2 h3 {
+  text-decoration: underline;
+  color: black;
+  text-align: center;
+  font-family: serif;
 }
 
+.section-2 nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px;
+  gap: 20px;
+  list-style: none;
+}
+
+.section-2 nav ul a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 15px;
+  color: #460809;
+  text-decoration: underline;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+}
+
+.section-3 h4 {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-decoration: underline;
+}
+
+.section-3 nav p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  flex-wrap: wrap;
+}
+
+.section-3 div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 55px;
+}
+
+.section-3 .archimaest {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #460809;
+  text-decoration: underline;
+  font-size: 20px;
+}
 
 footer {
-    font-family: $font-stack-enlaces;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+  background-color: #460809;
+  color: whitesmoke;
+}
+
+footer p {
+  margin: 0;
+  padding: 1rem;
+}
+
+@media (min-width: 370px) {
+  header {
+    flex-direction: column;
+  }
+  .Fireandblood {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .Fireandblood p {
+    margin: 0;
+  }
+  .section1 {
+    display: block;
+  }
+  .section-2 {
+    display: block;
+    justify-self: center;
     text-align: center;
-    background-color: $color-principal;
-    color: $color-texto-claro;
+    gap: 30px;
+  }
+  .button {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+@media (min-width: 768px) {
+  .button {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    flex-direction: row;
+  }
+  .Fireandblood {
+    flex-direction: row;
+  }
+  body {
+    font-size: 20px;
+    padding: 0px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+}
+.aegonconquistador header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 
-    p {
-        margin: 0;
-        padding: 1rem;
-    }
+.aegonconquistador .inicioaegon {
+  color: whitesmoke;
+  text-decoration: none;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+}
+
+.aegonconquistador .raenhysaegon {
+  color: #460809;
+  font-size: 20px;
+}
+
+.aegonconquistador .aegonyhermanas {
+  width: 200px;
+}
+
+.aegonconquistador .flex1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 20px;
+  gap: 30px;
+}
+
+.aegonconquistador .flex1 h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 40px;
+}
+
+.aegonconquistador .Balerionterrornegro {
+  width: 200px;
+}
+
+.aegonconquistador .baleriont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-decoration: none;
+  margin: 0;
+  padding: 20px;
+  gap: 20px;
+}
+
+.aegonconquistador .baleriont h2 {
+  text-decoration: underline;
+}
+
+.aegonconquistador .Volveraegon {
+  color: #460809;
+  text-decoration: underline;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+}
+
+.aegonconquistador .aegonf {
+  margin: 0;
+  padding: 0;
+  color: whitesmoke;
+  text-align: center;
 }
 
 
 
-@include respond-to($breakpoint-mobile) {
-    header {
-        flex-direction: column; 
-    }
-
-    .Fireandblood {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-
-        p {
-            margin: 0;
-        }
-    }
-
-    .section1 {
-        display: block;
-    }
-
-    .section-2 {
-        display: block;
-        justify-self: center;
-        text-align: center;
-        gap: 30px;
-    }
-    
-    .button {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
-}
-
-@include respond-to($breakpoint-tablet) {
-    .button {
-        flex-direction: row; 
-        gap: 10px;
-    }
-}
-
-@include respond-to($breakpoint-desktop) {
-    header {
-        flex-direction: row; 
-    }
-
-    .Fireandblood {
-        flex-direction: row; 
-    }
-
-    body {
-        font-size: 20px;
-        padding: 0px;
-        font-family: $fuente-targaryen;
-    }
-}
-
-
-// --- AEGON TARGARYEN Y BALERION ---
-
-.aegonconquistador {
-    header {
-        @include flex-base(row, space-between, center);
-    }
-
-    .inicioaegon {
-        color: $color-texto-claro;
-        text-decoration: none;
-        font-family: $font-stack-enlaces;
-        font-size: 20px;
-    }
-
-    .raenhysaegon {
-        color: $color-enlace-secundario;
-        font-size: 20px;
-    }
-
-    .aegonyhermanas {
-        width: 200px;
-    }
-
-    .flex1 {
-        @include flex-base(row, space-between, center);
-        margin: 0;
-        padding: 20px;
-        gap: 30px;
-
-        h1 {
-            font-family: $font-stack-enlaces;
-            font-size: 40px;
-        }
-    }
-
-    .Balerionterrornegro {
-        width: 200px;
-    }
-
-    .baleriont {
-        @include flex-base(row, space-between, center, wrap);
-        font-family: $font-stack-enlaces;
-        text-decoration: none; 
-        margin: 0;
-        padding: 20px;
-        gap: 20px;
-
-        h2 {
-            text-decoration: underline;
-        }
-    }
-
-    .Volveraegon {
-        color: $color-enlace-secundario;
-        text-decoration: underline;
-        font-family: $font-stack-enlaces;
-        font-size: 20px;
-    }
-
-    .aegonf {
-        margin: 0;
-        padding: 0;
-        color: $color-texto-claro;
-        text-align: center;
-    }
-}
-
+/*# sourceMappingURL=index.scss.map */
