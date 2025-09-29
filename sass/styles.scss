@@ -1,8 +1,4 @@
-// =====================================
-// 🎯 1. VARIABLES GLOBALES
-// =====================================
 
-// BREAKPOINTS
 $breakpoint-mobile: 370px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
@@ -21,18 +17,14 @@ $font-stack-especial: "Italianno", cursive; // Usado solo en el párrafo del hea
 $font-stack-enlaces: $fuente-targaryen;
 
 
-// =====================================
-// 🐉 2. MIXINS GLOBALES
-// =====================================
 
-// Mixin para Media Query
 @mixin respond-to($breakpoint) {
     @media (min-width: $breakpoint) {
         @content;
     }
 }
 
-// Mixin genérico para contenedores flex (sustituye a todos los mixins de flexbox)
+
 @mixin flex-base($direction: row, $justify: center, $align: center, $wrap: nowrap) {
     display: flex;
     flex-direction: $direction;
@@ -41,7 +33,7 @@ $font-stack-enlaces: $fuente-targaryen;
     flex-wrap: $wrap;
 }
 
-// Mixin para layout con padding, gap y margin (para secciones de contenido)
+
 @mixin content-layout($padding: 0, $gap: 0, $margin: 0) {
     @include flex-base(row, space-between, center);
     @if $padding != 0 {
@@ -55,9 +47,9 @@ $font-stack-enlaces: $fuente-targaryen;
     }
 }
 
-// =====================================
-// 🖥️ 3. ESTILOS BASE Y PÁGINA PRINCIPAL
-// =====================================
+
+
+
 
 body {
     margin: 0;
@@ -209,9 +201,7 @@ footer {
     }
 }
 
-// =====================================
-// 📱 4. MEDIA QUERIES (MOBILE FIRST)
-// =====================================
+
 
 @include respond-to($breakpoint-mobile) {
     header {
@@ -269,9 +259,6 @@ footer {
     }
 }
 
-// =====================================
-// 👑 5. PÁGINAS SECUNDARIAS
-// =====================================
 
 // --- AEGON TARGARYEN Y BALERION ---
 
@@ -340,7 +327,7 @@ footer {
     }
 }
 
-// --- VISENYA TARGARYEN ---
+// VISENIA
 
 .visenyatargaryenn {
     background-color: $color-principal; 
@@ -389,7 +376,7 @@ footer {
 }
 
 
-// --- RAENHYS Y MERAXES ---
+// RAENHYS
 
 .raenhystargaryen {
     @include content-layout;
