@@ -1,3 +1,17 @@
+$color-fuego: #460809; 
+$color-secundario: #FAE9E6; 
+$color-texto-claro: whitesmoke; //olor nieve
+$color-enlace-secundario: #460809; 
+
+// LETRAS
+$font-stack-secundaria: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+$font-stack-titulos: Georgia, 'Times New Roman', Times, serif;
+$font-stack-especial: "Italianno", cursive; 
+
+
+
+$font-targaryen: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+
 body {
   margin: 0;
   padding: 0;
@@ -15,7 +29,7 @@ img {
 }
 
 header {
-  background-color: #460809;
+  background-color:$color-fuego ;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -25,7 +39,7 @@ header {
 }
 
 header p {
-  color: whitesmoke;
+  color:$color-texto-claro;
   text-decoration: none;
   font-size: 55px;
   font-family: "Italianno", cursive;
@@ -45,13 +59,13 @@ header nav ul {
 }
 
 .btn {
-  background-color: #460809;
+  background-color: $color-fuego;
   font-size: 15px;
   padding: 10px;
 }
 
 .button a {
-  color: whitesmoke;
+  color:$color-texto-claro;
   text-decoration: none;
 }
 
@@ -66,7 +80,7 @@ header nav ul {
 }
 
 .enlace {
-  color: whitesmoke;
+  color:$color-texto-claro;
   text-decoration: underline;
 }
 
@@ -97,7 +111,7 @@ main h1 {
 }
 
 .section1 .otrosmiembros {
-  color: #460809;
+  color: $color-fuego;
   text-decoration: underline;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 20px;
@@ -128,7 +142,7 @@ main h1 {
   align-items: center;
   flex-wrap: nowrap;
   gap: 15px;
-  color: #460809;
+  color: $color-fuego;
   text-decoration: underline;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 20px;
@@ -156,7 +170,7 @@ main h1 {
 
 .section-3 .archimaest {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  color: #460809;
+  color: $color-fuego;
   text-decoration: underline;
   font-size: 20px;
 }
@@ -164,8 +178,8 @@ main h1 {
 footer {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   text-align: center;
-  background-color: #460809;
-  color: whitesmoke;
+  background-color: $color-fuego;
+  color:$color-texto-claro;
 }
 
 footer p {
@@ -228,14 +242,14 @@ footer p {
 }
 
 .aegonconquistador .inicioaegon {
-  color: whitesmoke;
+  color:$color-texto-claro;
   text-decoration: none;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 20px;
 }
 
 .aegonconquistador .raenhysaegon {
-  color: #460809;
+  color: $color-fuego;
   font-size: 20px;
 }
 
@@ -281,7 +295,7 @@ footer p {
 }
 
 .aegonconquistador .Volveraegon {
-  color: #460809;
+  color: $color-fuego;
   text-decoration: underline;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 20px;
@@ -290,8 +304,144 @@ footer p {
 .aegonconquistador .aegonf {
   margin: 0;
   padding: 0;
-  color: whitesmoke;
+  color:$color-texto-claro;
   text-align: center;
+}
+
+@mixin flex-layout($padding: 0, $gap: 0, $margin: 0) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @if $padding != 0 {
+        padding: $padding;
+    }
+    @if $gap != 0 {
+        gap: $gap;
+    }
+    @if $margin != 0 {
+        margin: $margin;
+    }
+}
+
+
+.visenyatargaryenn {
+    background-color: $color-fuego; 
+    @include flex-layout; 
+
+    .iniciov {
+        color:$color-texto-claro; 
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    .reinavisenya {
+        width: 200px;
+    }
+}
+
+.visenyaintro {
+    @include flex-layout(15px, 15px, 55px); 
+
+    h1 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 40px;
+    }
+}
+
+.vagharDragon {
+    width: 250px;
+}
+
+.Vaghargreen {
+    @include flex-layout(10px, 15px, 55px); 
+
+    h2 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 30px;
+        text-decoration: underline;
+    }
+}
+
+.volvervisenya {
+    color: $color-fuego;
+    text-decoration: underline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    padding: 30px;
+}
+
+footer {
+    color: $color-texto-claro;
+    text-align: center;
+}
+
+
+
+// RAENHYS Y MERAXES
+
+
+@mixin flex-layout($padding: 0, $gap: 0, $margin: 0) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @if $padding != 0 {
+        padding: $padding;
+    }
+    @if $gap != 0 {
+        gap: $gap;
+    }
+    @if $margin != 0 {
+        margin: $margin;
+    }
+}
+
+
+
+.raenhystargaryen {
+    @include flex-layout;
+
+    .inicioraenhys {
+        color: $color-texto-claro;
+        font-family: $font-targaryen;
+        text-decoration: underline;
+        font-size: 20px;
+    }
+
+    .raenhysportada {
+        width: 175px;
+    }
+}
+
+.rhaenysmain {
+  
+    @include flex-layout(15px, 15px, 55px);
+}
+
+.enlacehermanos {
+    color: $color-fuego;
+    font-size: 20px;
+}
+
+.dragonmeraxes {
+    width: 250px;
+}
+
+.meraxesD {
+    
+    @include flex-layout(15px, 15px, 55px);
+
+    h2 {
+        text-decoration: underline;
+        font-family: $font-targaryen;
+    }
+}
+
+.volverraenhys {
+    color: $color-fuego;
+    text-decoration: underline;
+    font-family: $font-targaryen;
+    font-size: 20px;
+    padding: 20px;
 }
 
 
