@@ -1,0 +1,96 @@
+//visenya variable
+
+.visenyatargaryenn {
+    background-color: $color-visenya-principal; 
+    @include content-layout; 
+
+    .iniciov {
+        color: $color-texto-claro; 
+        text-decoration: none;
+        font-size: $font-size-enlace-secundario-visenya;
+    }
+
+    .reinavisenya {
+        width: $imagen-ancho-visenya-portada;
+    }
+}
+
+.visenyaintro {
+    @include content-layout(15px, 15px, 55px); 
+
+    h1 {
+        font-family: $font-stack-visenya;
+        font-size: $font-size-titulo-h1-tematico;
+    }
+}
+
+.vagharDragon {
+    width: $imagen-ancho-dragon;
+}
+
+.Vaghargreen {
+    @include content-layout(10px, 15px, 55px); 
+
+    h2 {
+        font-family: $font-stack-visenya;
+        font-size: $font-size-titulo-h2-visenya;
+        text-decoration: underline;
+    }
+}
+
+.volvervisenya {
+    color: $color-visenya-texto-enlace;
+    text-decoration: underline;
+    font-family: $font-stack-visenya;
+    font-size: $font-size-enlace-secundario-visenya;
+    padding: $padding-tematico-y-volver;
+}
+
+// raenhys variable
+
+
+.raenhystargaryen {
+    background-color: $color-raenhys-principal;
+    @include content-layout;
+
+    .inicioraenhys {
+        color: $color-texto-claro;
+        font-family: $font-stack-raenhys;
+        text-decoration: underline;
+        font-size: $font-size-enlace-secundario-raenhys;
+    }
+
+    .raenhysportada {
+        width: $imagen-ancho-raenhys-portada;
+    }
+}
+
+.rhaenysmain {
+    @include content-layout(15px, 15px, 55px);
+}
+
+.enlacehermanos {
+    color: $color-raenhys-texto-enlace;
+    font-size: $font-size-enlace-secundario-raenhys;
+}
+
+.dragonmeraxes {
+    width: $imagen-ancho-dragon;
+}
+
+.meraxesD {
+    @include content-layout(15px, 15px, 55px);
+
+    h2 {
+        text-decoration: underline;
+        font-family: $font-stack-raenhys;
+    }
+}
+
+.volverraenhys {
+    color: $color-raenhys-texto-enlace;
+    text-decoration: underline;
+    font-family: $font-stack-raenhys;
+    font-size: $font-size-enlace-secundario-raenhys;
+    padding: 20px; 
+}
