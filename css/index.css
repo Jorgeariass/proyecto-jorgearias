@@ -192,10 +192,10 @@ footer p {
     margin: 0;
   }
   .section1 {
-    display: block;
+    flex-direction: column;
   }
   .section-2 {
-    display: block;
+    flex-direction: column;
     justify-self: center;
     text-align: center;
     gap: 30px;
@@ -307,8 +307,8 @@ footer p {
   text-decoration: none;
   font-size: 20px;
 }
-.visenyatargaryenn .reinavisenya {
-  width: 200px;
+.visenyatargaryenn .reinavisenya img {
+  width: 300px;
 }
 
 .visenyaintro {
@@ -322,11 +322,11 @@ footer p {
 }
 .visenyaintro h1 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 40px;
+  font-size: 25px;
 }
 
 .vagharDragon {
-  width: 250px;
+  width: 150px;
 }
 
 .Vaghargreen {
@@ -340,7 +340,7 @@ footer p {
 }
 .Vaghargreen h2 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 30px;
+  font-size: 20px;
   text-decoration: none;
 }
 

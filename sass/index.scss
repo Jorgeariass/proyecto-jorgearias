@@ -209,10 +209,10 @@ footer p {
     margin: 0;
   }
   .section1 {
-    display: block;
+    flex-direction: column;
   }
   .section-2 {
-    display: block;
+    flex-direction: column;
     justify-self: center;
     text-align: center;
     gap: 30px;
@@ -322,6 +322,8 @@ footer p {
   text-align: center;
 }
 
+// Visenya y Vaghar
+
 @mixin flex-layout($padding: 0, $gap: 0, $margin: 0) {
     display: flex;
     flex-direction: row;
@@ -349,8 +351,8 @@ footer p {
         font-size: 20px;
     }
 
-    .reinavisenya {
-        width: 200px;
+.reinavisenya img{
+        width: 300px;
     }
 }
 
@@ -359,12 +361,12 @@ footer p {
 
     h1 {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 40px;
+        font-size: 25px;
     }
 }
 
 .vagharDragon {
-    width: 250px;
+    width: 150px;
 }
 
 .Vaghargreen {
@@ -372,7 +374,7 @@ footer p {
 
     h2 {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 30px;
+        font-size: 20px;
         text-decoration: none;
     }
 }
