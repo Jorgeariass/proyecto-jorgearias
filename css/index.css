@@ -298,6 +298,7 @@ footer p {
 .visenyatargaryenn {
   background-color: #460809;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -312,6 +313,7 @@ footer p {
 
 .visenyaintro {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
@@ -329,6 +331,7 @@ footer p {
 
 .Vaghargreen {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
@@ -356,6 +359,7 @@ footer {
 
 .raenhystargaryen {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -371,6 +375,7 @@ footer {
 
 .rhaenysmain {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
@@ -389,6 +394,7 @@ footer {
 
 .meraxesD {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
