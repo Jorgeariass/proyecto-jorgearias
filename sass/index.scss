@@ -194,6 +194,8 @@ footer p {
   padding: 1rem;
 }
 
+// Celulares
+
 @media (min-width: 370px) {
   header {
     flex-direction: column;
@@ -221,12 +223,18 @@ footer p {
     gap: 5px;
   }
 }
+
+// Tablets
+
 @media (min-width: 768px) {
   .button {
     flex-direction: row;
     gap: 10px;
   }
 }
+
+// Pc
+
 @media (min-width: 1024px) {
   header {
     flex-direction: row;
@@ -234,6 +242,8 @@ footer p {
   .Fireandblood {
     flex-direction: row;
   }
+  
+
   
 }
 .aegonconquistador header {
@@ -343,7 +353,7 @@ footer p {
 }
 
 .visenyaintro {
-    @include flex-layout(15px, 15px, 55px); 
+    @include flex-layout(15px, 15px, 0px); 
 
     h1 {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -356,7 +366,7 @@ footer p {
 }
 
 .Vaghargreen {
-    @include flex-layout(10px, 15px, 55px); 
+    @include flex-layout(10px, 15px, 0px); 
 
     h2 {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -417,7 +427,7 @@ footer {
 
 .rhaenysmain {
   
-    @include flex-layout(15px, 15px, 55px);
+    @include flex-layout(15px, 15px, 0px);
 }
 
 .enlacehermanos {
@@ -431,7 +441,7 @@ footer {
 
 .meraxesD {
     
-    @include flex-layout(15px, 15px, 55px);
+    @include flex-layout(15px, 15px, 0px);
 
     h2 {
         text-decoration: none;

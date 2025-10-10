@@ -316,7 +316,7 @@ footer p {
   align-items: center;
   padding: 15px;
   gap: 15px;
-  margin: 55px;
+  margin: 0px;
 }
 .visenyaintro h1 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -333,7 +333,7 @@ footer p {
   align-items: center;
   padding: 10px;
   gap: 15px;
-  margin: 55px;
+  margin: 0px;
 }
 .Vaghargreen h2 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -375,7 +375,7 @@ footer {
   align-items: center;
   padding: 15px;
   gap: 15px;
-  margin: 55px;
+  margin: 0px;
 }
 
 .enlacehermanos {
@@ -393,7 +393,7 @@ footer {
   align-items: center;
   padding: 15px;
   gap: 15px;
-  margin: 55px;
+  margin: 0px;
 }
 .meraxesD h2 {
   text-decoration: none;
