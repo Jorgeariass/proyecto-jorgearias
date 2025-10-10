@@ -7,9 +7,6 @@ $color-enlace-secundario: #460809;
 $font-stack-secundaria: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 $font-stack-titulos: Georgia, 'Times New Roman', Times, serif;
 $font-stack-especial: "Italianno", cursive; 
-
-
-
 $font-targaryen: Georgia, 'Times New Roman', Times, serif;  
 
 body {
@@ -109,6 +106,10 @@ main h1 {
   margin: 50px;
   font-family: $font-targaryen;
   gap: 30px;
+}
+
+.logot{
+  width: 200px;
 }
 
 .section1 h2{
@@ -247,31 +248,27 @@ footer p {
 // Aegon el conquistador
 
 }
-.aegonconquistador header {
+.aegonconquiistador header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-.aegonconquistador .inicioaegon {
-  color:$color-texto-claro;
-  text-decoration: none;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 20px;
-}
-
-.aegonconquistador .raenhysaegon {
+.raenhysaegon {
   color: $color-fuego;
   font-size: 20px;
 }
 
-.aegonconquistador .aegonyhermanas {
-  width: 200px;
+.aegonyhermanas {
+  width: 250px;
 }
 
-.aegonconquistador .flex1 {
+.flex1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -282,16 +279,16 @@ footer p {
   gap: 30px;
 }
 
-.aegonconquistador .flex1 h1 {
+.flex1 h1 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 20px;
+  font-size: 30px;
 }
 
-.aegonconquistador .Balerionterrornegro {
+.Balerionterrornegro {
   width: 200px;
 }
 
-.aegonconquistador .baleriont {
+.baleriont {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -304,23 +301,14 @@ footer p {
   gap: 20px;
 }
 
-.aegonconquistador .baleriont h2 {
-  text-decoration: underline;
-}
-
-.aegonconquistador .Volveraegon {
+.Volveraegon {
   color: $color-fuego;
-  text-decoration: underline;
+  text-decoration: none;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 20px;
+  text-decoration: underline;
 }
 
-.aegonconquistador .aegonf {
-  margin: 0;
-  padding: 0;
-  color:$color-texto-claro;
-  text-align: center;
-}
 
 // Visenya y Vaghar
 
@@ -431,9 +419,15 @@ footer {
 }
 
 .rhaenysmain {
+  @include flex-layout(0px, 15px, 0px);
+
+  h1{
+    font-size: 25px;
+  }
   
-    @include flex-layout(15px, 15px, 0px);
+     
 }
+
 
 .enlacehermanos {
     color: $color-fuego;
@@ -441,7 +435,7 @@ footer {
 }
 
 .dragonmeraxes {
-    width: 250px;
+    width: 150px;
 }
 
 .meraxesD {
@@ -451,6 +445,7 @@ footer {
     h2 {
         text-decoration: none;
         font-family: $font-targaryen;
+        font-size: 20px;
     }
 }
 
