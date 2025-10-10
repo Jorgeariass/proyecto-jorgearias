@@ -1,6 +1,6 @@
 $color-fuego: #460809; 
 $color-secundario: #FAE9E6; 
-$color-texto-claro: whitesmoke; //olor nieve
+$color-texto-claro: whitesmoke; //
 $color-enlace-secundario: #460809; 
 
 // LETRAS
@@ -10,7 +10,7 @@ $font-stack-especial: "Italianno", cursive;
 
 
 
-$font-targaryen: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+$font-targaryen: Georgia, 'Times New Roman', Times, serif;  
 
 body {
   margin: 0;
@@ -91,12 +91,12 @@ main {
   align-items: center;
   flex-wrap: wrap;
   margin: 55px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: $font-targaryen
 }
 
 main h1 {
   text-align: center;
-  text-decoration: underline;
+  text-decoration: none;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
@@ -107,13 +107,13 @@ main h1 {
   align-items: center;
   flex-wrap: nowrap;
   margin: 50px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: $font-targaryen;
   gap: 30px;
 }
 
 .section1 h2{
-  text-decoration: underline;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-decoration: none;
+  font-family: $font-targaryen;
 
 }
 
@@ -125,10 +125,10 @@ main h1 {
 }
 
 .section-2 h3 {
-  text-decoration: underline;
+  text-decoration: none;
   color: black;
   text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: fonttar;
 }
 
 .section-2 nav ul {
@@ -158,11 +158,11 @@ main h1 {
 .section-3 h4 {
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .section-3 nav p {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: $font-targaryen;
   flex-wrap: wrap;
 }
 
@@ -176,7 +176,7 @@ main h1 {
 }
 
 .section-3 .archimaest {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: $font-targaryen;
   color: $color-fuego;
   text-decoration: underline;
   font-size: 20px;
@@ -234,11 +234,7 @@ footer p {
   .Fireandblood {
     flex-direction: row;
   }
-  body {
-    font-size: 20px;
-    padding: 0px;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  }
+  
 }
 .aegonconquistador header {
   display: flex;
@@ -277,7 +273,7 @@ footer p {
 
 .aegonconquistador .flex1 h1 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 40px;
+  font-size: 20px;
 }
 
 .aegonconquistador .Balerionterrornegro {
@@ -365,16 +361,16 @@ footer p {
     h2 {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 30px;
-        text-decoration: underline;
+        text-decoration: none;
     }
 }
 
 .volvervisenya {
     color: $color-fuego;
     text-decoration: underline;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: $font-targaryen;
     font-size: 20px;
-    padding: 30px;
+    padding: 20px;
 }
 
 footer {
@@ -411,7 +407,7 @@ footer {
         color: $color-texto-claro;
         font-family: $font-targaryen;
         text-decoration: underline;
-        font-size: 20px;
+        font-size: 10px;
     }
 
     .raenhysportada {
@@ -438,7 +434,7 @@ footer {
     @include flex-layout(15px, 15px, 55px);
 
     h2 {
-        text-decoration: underline;
+        text-decoration: none;
         font-family: $font-targaryen;
     }
 }
