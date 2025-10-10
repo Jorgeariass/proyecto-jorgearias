@@ -247,16 +247,22 @@ footer p {
 
 // Aegon el conquistador
 
+@mixin flex-layout($padding: 0, $gap: 0, $margin: 0) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @if $padding != 0 {
+        padding: $padding;
+    }
+    @if $gap != 0 {
+        gap: $gap;
+    }
+    @if $margin != 0 {
+        margin: $margin;
+    }
 }
-.aegonconquiistador header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  margin: 0;
-  padding: 0;
-  border: 0;
+
 }
 
 .raenhysaegon {

@@ -224,17 +224,6 @@ footer p {
     flex-direction: row;
   }
 }
-.aegonconquiistador header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
 .raenhysaegon {
   color: #460809;
   font-size: 20px;
