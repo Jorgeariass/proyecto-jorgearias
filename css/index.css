@@ -23,14 +23,12 @@ header {
   flex-wrap: nowrap;
   padding: 10px 50px;
 }
-
 header p {
   color: whitesmoke;
   text-decoration: none;
   font-size: 55px;
   font-family: "Italianno", cursive;
 }
-
 header nav ul {
   display: flex;
   flex-direction: row;
@@ -79,11 +77,14 @@ main {
   margin: 55px;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
-
 main h1 {
   text-align: center;
   text-decoration: none;
   font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.logot {
+  width: 200px;
 }
 
 .section1 {
@@ -96,16 +97,10 @@ main h1 {
   font-family: Georgia, "Times New Roman", Times, serif;
   gap: 30px;
 }
-
-.logot {
-  width: 200px;
-}
-
 .section1 h2 {
   text-decoration: none;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
-
 .section1 .otrosmiembros {
   color: #460809;
   text-decoration: underline;
@@ -119,7 +114,6 @@ main h1 {
   text-align: center;
   font-family: fonttar;
 }
-
 .section-2 nav ul {
   display: flex;
   flex-direction: row;
@@ -130,7 +124,6 @@ main h1 {
   gap: 20px;
   list-style: none;
 }
-
 .section-2 nav ul a {
   display: flex;
   flex-direction: row;
@@ -149,12 +142,10 @@ main h1 {
   font-family: Georgia, "Times New Roman", Times, serif;
   text-decoration: none;
 }
-
 .section-3 nav p {
   font-family: Georgia, "Times New Roman", Times, serif;
   flex-wrap: wrap;
 }
-
 .section-3 div {
   display: flex;
   flex-direction: row;
@@ -163,7 +154,6 @@ main h1 {
   flex-wrap: nowrap;
   margin: 55px;
 }
-
 .section-3 .archimaest {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #460809;
@@ -177,59 +167,9 @@ footer {
   background-color: #460809;
   color: whitesmoke;
 }
-
 footer p {
   margin: 0;
   padding: 1rem;
-}
-
-@media (min-width: 370px) {
-  header {
-    flex-direction: column;
-  }
-  .Fireandblood {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  .Fireandblood p {
-    margin: 0;
-  }
-  .section1 {
-    flex-direction: column;
-  }
-  .section-2 {
-    flex-direction: column;
-    justify-self: center;
-    text-align: center;
-    gap: 30px;
-  }
-  .button {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-}
-@media (min-width: 768px) {
-  .button {
-    flex-direction: row;
-    gap: 10px;
-  }
-}
-@media (min-width: 1024px) {
-  header {
-    flex-direction: row;
-  }
-  .Fireandblood {
-    flex-direction: row;
-  }
-}
-.flex1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
 }
 
 .raenhysaegon {
@@ -284,7 +224,7 @@ footer p {
   font-size: 20px;
 }
 .visenyatargaryenn .reinavisenya img {
-  width: 300px;
+  width: 175px;
 }
 
 .visenyaintro {
@@ -328,11 +268,6 @@ footer p {
   padding: 20px;
 }
 
-footer {
-  color: whitesmoke;
-  text-align: center;
-}
-
 .raenhystargaryen {
   display: flex;
   flex-direction: row;
@@ -361,8 +296,7 @@ footer {
 .rhaenysmain h1 {
   font-size: 25px;
 }
-
-.enlacehermanos {
+.rhaenysmain .enlacehermanos {
   color: #460809;
   font-size: 20px;
 }
@@ -394,6 +328,47 @@ footer {
   padding: 20px;
 }
 
+@media (min-width: 370px) {
+  header {
+    flex-direction: column;
+  }
+  .Fireandblood {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .Fireandblood p {
+    margin: 0;
+  }
+  .section1 {
+    flex-direction: column;
+  }
+  .section-2 {
+    flex-direction: column;
+    justify-self: center;
+    text-align: center;
+    gap: 30px;
+  }
+  .button {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+@media (min-width: 768px) {
+  .button {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    flex-direction: row;
+  }
+  .Fireandblood {
+    flex-direction: row;
+  }
+}
 
 
 /*# sourceMappingURL=index.css.map */
