@@ -1,0 +1,8 @@
+El presente proyecto trata acerca del libro "FIRE AND BLOOD" cuyo auto es George Martin, un libro dedicado a la historia Targaryen desde la "Conquista de Aegon" hasta el fin de la "Danza de los Dragones". Lo que quiero regflejar es mas que nada una base informativa de personajes, dragones, sucesos importantes entre otras cosas. Asimismmo se notara que 
+presento 3 enlaces dentro del header correspondientes a la pagina "Hielo y Fuego WIKI", una pagina informativa donde se cuenta absolutamente todo acerca del mundo de Martin.
+En dicho proyecto como se puede observar inclui HTML, y fui dandole estilos con CSS y SASS a medida que fui avanzando. Con las variables y los mixins puede modificar y darle estilos tambien a las fuentes, a los fondos de cada html. Utilize las media querys para adaptar la pagina a distintos dispositivos como "celulares, tables y pc" modificando estilos 
+dentro de las resoluciones de cada uno. A medidad que el proyecto avanzo, a traves de github pude ir agregando y guardando los distintos cambios que fui haciendole con commits y pusheando todo el contenido.
+
+Con respecto a las animaciones no quize acaparar toda la pagina con ella, es asi que utilize la regla "keyframe" para darle animacion al texto del header. Despues desde la pagina "animate.style" pude tomar algun que otro estilo para aplicarlos a los titulos para que tengan un breve movimiento y llamar la atencion de quien vea la pagina. 
+Por ultimo, teniendo en cuenta el SEO del mismo, realize un "meta description" y "keywords" para darle peso a la pagina y que dentro de los servidores tenga cierta relevancia a la hora de su busqueda.
+
