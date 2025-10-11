@@ -17,7 +17,6 @@ img {
 header {
   background-color: #460809;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 10px 50px;
@@ -42,7 +41,6 @@ header p {
 }
 header nav ul {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
@@ -64,7 +62,6 @@ header nav ul {
 
 .Fireandblood {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
@@ -79,7 +76,6 @@ header nav ul {
 
 main {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 55px;
@@ -98,7 +94,6 @@ main h1 {
 
 .section1 {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
@@ -124,7 +119,6 @@ main h1 {
 }
 .section-2 nav ul {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 50px;
@@ -135,7 +129,6 @@ main h1 {
 }
 .section-2 nav ul a {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 15px;
@@ -157,7 +150,6 @@ main h1 {
 }
 .section-3 div {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 55px;
@@ -202,7 +194,6 @@ footer p {
 
 .baleriont {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
@@ -223,7 +214,6 @@ footer p {
 .visenyatargaryenn {
   background-color: #460809;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -238,7 +228,6 @@ footer p {
 
 .visenyaintro {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
@@ -256,7 +245,6 @@ footer p {
 
 .Vaghargreen {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
@@ -279,7 +267,6 @@ footer p {
 
 .raenhystargaryen {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -295,7 +282,6 @@ footer p {
 
 .rhaenysmain {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0px;
@@ -316,7 +302,6 @@ footer p {
 
 .meraxesD {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 15px;

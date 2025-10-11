@@ -10,7 +10,6 @@ $font-targaryen: Georgia, 'Times New Roman', Times, serif;
 
 @mixin flex-layout($padding: 0, $gap: 0, $margin: 0) {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
