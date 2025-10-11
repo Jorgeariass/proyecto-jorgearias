@@ -131,7 +131,7 @@ main {
     }
 
     nav ul {
-        @include flex-layout(50px, 20px);
+        @include flex-layout(50px, 50px, 50px);
         justify-content: space-around;
         flex-wrap: wrap;
         list-style: none;
@@ -143,6 +143,7 @@ main {
             text-decoration: none;
             font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
             font-size: 20px;
+
         }
     }
 }
@@ -208,11 +209,26 @@ footer {
 }
 
 .Balerionterrornegro {
-    width: 200px;
+    @include flex-layout(0px, 0px, 0px);
+    width: 150px;
 }
 
+.camposdefuego {
+    display: flex;
+    flex-direction: column;
+
+    h3{
+        text-align: center;
+        font-size: 15px
+    }
+
+    p{
+        font-size: 15px;
+        font-family: $font-targaryen;
+    }
+}
 .baleriont {
-    @include flex-layout(20px, 20px, 0);
+    @include flex-layout(0px, 20px, 0);
     flex-wrap: wrap;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     text-decoration: none;
@@ -298,7 +314,7 @@ footer {
     h1 {
         font-size: 25px;
     }
-
+    
     .enlacehermanos {
         color: $color-fuego;
         font-size: 20px;
@@ -306,11 +322,12 @@ footer {
 }
 
 .dragonmeraxes {
+    @include flex-layout(0px, 30px, 0px);
     width: 150px;
 }
 
 .meraxesD {
-    @include flex-layout(15px, 15px, 0px);
+    @include flex-layout(0px, 10px, 0px);
 
     h2 {
         text-decoration: none;
@@ -318,6 +335,22 @@ footer {
         font-size: 20px;
     }
 }
+
+.sotoinfierno {
+    @include flex-layout(0px, 0px, 0px);
+    display: flex;
+    flex-direction: column;
+
+    h3{
+        font-size: 15px
+    }
+
+    p{
+        font-size: 15px;
+        font-family: $font-targaryen;
+    }
+}
+
 
 .volverraenhys {
     color: $color-fuego;
