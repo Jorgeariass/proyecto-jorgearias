@@ -1,15 +1,13 @@
-$color-fuego: #460809; 
-$color-secundario: #FAE9E6; 
-$color-texto-claro: whitesmoke; 
-$color-enlace-secundario: #460809; 
+$color-fuego: #460809;
+$color-secundario: #FAE9E6;
+$color-texto-claro: whitesmoke;
+$color-enlace-secundario: #460809;
 
-// LETRAS
 $font-stack-secundaria: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 $font-stack-titulos: Georgia, 'Times New Roman', Times, serif;
-$font-stack-especial: "Italianno", cursive; 
-$font-targaryen: Georgia, 'Times New Roman', Times, serif; 
+$font-stack-especial: "Italianno", cursive;
+$font-targaryen: Georgia, 'Times New Roman', Times, serif;
 
-// mixin
 @mixin flex-layout($padding: 0, $gap: 0, $margin: 0) {
     display: flex;
     flex-direction: row;
@@ -27,12 +25,10 @@ $font-targaryen: Georgia, 'Times New Roman', Times, serif;
     }
 }
 
-// estilos generales
-
 body {
     margin: 0;
     padding: 0;
-    background-color: $color-secundario; // Usando variable
+    background-color: $color-secundario;
 }
 
 img {
@@ -45,35 +41,31 @@ img {
     padding: 10px;
 }
 
-// header y nav
-
 header {
     background-color: $color-fuego;
-    display: flex;
-    flex-direction: row;
+    @include flex-layout(10px 50px);
     justify-content: space-around;
-    align-items: center;
     flex-wrap: nowrap;
-    padding: 10px 50px;
 
     p {
         color: $color-texto-claro;
         text-decoration: none;
         font-size: 55px;
-        font-family: $font-stack-especial; // Usando variable
+        font-family: $font-stack-especial;
+        opacity: 0;
+        animation: myAnimation 5s infinite;
+}
+
+@keyframes myAnimation {
+  0% { opacity: 0;}
+  100% { opacity: 1;}
     }
 
     nav ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: nowrap;
+        @include flex-layout(0, 30px, 0);
         list-style: none;
         font-family: Arial, Helvetica, sans-serif;
-        gap: 30px;
-        padding: 0;
-        margin: 0;
+        flex-wrap: nowrap;
     }
 }
 
@@ -86,16 +78,12 @@ header {
 .button a {
     color: $color-texto-claro;
     text-decoration: none;
-}
+    
+  }
 
 .Fireandblood {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-layout(20px, 30px);
     flex-wrap: nowrap;
-    padding: 20px;
-    gap: 30px;
 }
 
 .enlace {
@@ -103,38 +91,29 @@ header {
     text-decoration: underline;
 }
 
-// main
-
 main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-layout(0, 0, 55px);
     flex-wrap: wrap;
-    margin: 55px;
     font-family: $font-targaryen;
 
     h1 {
         text-align: center;
         text-decoration: none;
-        font-family: $font-stack-titulos; // Usando variable
+        font-family: $font-stack-titulos;
     }
 }
 
 .logot {
     width: 200px;
+    
 }
 
-// SECTION 1
+//section 1
+
 .section1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-layout(0, 30px, 50px);
     flex-wrap: nowrap;
-    margin: 50px;
     font-family: $font-targaryen;
-    gap: 30px;
 
     h2 {
         text-decoration: none;
@@ -149,32 +128,24 @@ main {
     }
 }
 
-// SECTION 2
+// section 2
+
 .section-2 {
     h3 {
         text-decoration: none;
         color: black;
         text-align: center;
-        font-family: fonttar; // Nota: 'fonttar' no está definida en tus variables.
     }
 
     nav ul {
-        display: flex;
-        flex-direction: row;
+        @include flex-layout(50px, 20px);
         justify-content: space-around;
-        align-items: center;
         flex-wrap: wrap;
-        padding: 50px;
-        gap: 20px;
         list-style: none;
 
         a {
-            display: flex;
-            flex-direction: row;
+            @include flex-layout(0, 15px);
             justify-content: center;
-            align-items: center;
-            flex-wrap: nowrap;
-            gap: 15px;
             color: $color-fuego;
             text-decoration: none;
             font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -183,11 +154,12 @@ main {
     }
 }
 
-// SECTION 3
+// section 3
+
 .section-3 {
     h4 {
         text-align: center;
-        font-family: $font-stack-titulos; // Usando variable
+        font-family: $font-stack-titulos;
         text-decoration: none;
     }
 
@@ -197,12 +169,9 @@ main {
     }
 
     div {
-        display: flex;
-        flex-direction: row;
+        @include flex-layout(0, 0, 55px);
         justify-content: center;
-        align-items: center;
         flex-wrap: nowrap;
-        margin: 55px;
     }
 
     .archimaest {
@@ -214,6 +183,7 @@ main {
 }
 
 // footer
+
 footer {
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     text-align: center;
@@ -226,6 +196,7 @@ footer {
     }
 }
 
+// Aegon y Balerion
 
 .raenhysaegon {
     color: $color-fuego;
@@ -237,7 +208,6 @@ footer {
 }
 
 .flex1 {
-       
     h1 {
         font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
         font-size: 25px;
@@ -249,16 +219,10 @@ footer {
 }
 
 .baleriont {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-layout(20px, 20px, 0);
     flex-wrap: wrap;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     text-decoration: none;
-    margin: 0;
-    padding: 20px;
-    gap: 20px;
 }
 
 .Volveraegon {
@@ -270,6 +234,7 @@ footer {
 }
 
 // Visenya y Vaghar
+
 .visenyatargaryenn {
     background-color: $color-fuego;
     @include flex-layout;
@@ -317,7 +282,8 @@ footer {
 }
 
 
-// RAENHYS Y MERAXES
+// Raenhys y meraxes
+
 .raenhystargaryen {
     @include flex-layout;
 
@@ -368,8 +334,6 @@ footer {
     padding: 20px;
 }
 
-// mediaq
-
 @media (min-width: 370px) {
     header {
         flex-direction: column;
@@ -413,5 +377,3 @@ footer {
         flex-direction: row;
     }
 }
-
-/*# sourceMappingURL=index.scss.map */
